@@ -12,7 +12,6 @@ if (process.env.NODE_ENV !== 'production') {
 
   app.use(require('webpack-dev-middleware')(compiler, {
     noInfo: true,
-    hot: true,
     inline: true,
     lazy: false,
     publicPath: webpackConfig.output.publicPath,

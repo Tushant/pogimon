@@ -1,4 +1,5 @@
 import App from './components/app';
+import Home from './containers/App/index';
 
 function loadRoute(cb) {
  return (module) => cb(null, module.default);
@@ -10,13 +11,9 @@ function errorLoading(err) {
 
 const routes = {
   component: App,
+  path: '/',
+  indexRoute: { component: Home },
   childRoutes: [
-    {
-      path: '/',
-      getComponent(location, cb) {
-        System.import('./containers/App/index').then(loadRoute(cb)).catch(errorLoading);
-      }
-    },
     {
       path: 'product',
       getComponent(location, cb) {

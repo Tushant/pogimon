@@ -3,11 +3,13 @@ const webpack = require('webpack'); // eslint-disable-line
 const HtmlWebpackPlugin = require('html-webpack-plugin'); // eslint-disable-line
 const ExtractTextPlugin = require('extract-text-webpack-plugin'); // eslint-disable-line
 
-// if (!process.env.NODE_ENV) {
-//     process.env.NODE_ENV = 'development';
-// }
+if (!process.env.NODE_ENV) {
+    process.env.NODE_ENV = 'development';
+}
 
 const isDevelopment = process.env.NODE_ENV === 'development';
+console.log('top isDevelopment', isDevelopment);
+console.log('####################################');
 
 const VENDOR_LIBS = [
     'react', 'react-dom', 'redux', 'react-redux',
@@ -20,7 +22,7 @@ const entryPath = path.join(__dirname, 'src/index.js');
 const config = {
   entry: {
     bundle: isDevelopment ? [
-                            'webpack-hot-middleware/client',
+                            'webpack-hot-middleware/client?reload=true',
                             'react-hot-loader/patch',
                             'webpack/hot/only-dev-server',
                             entryPath
@@ -30,7 +32,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, 'dist/'),
     publicPath: '/',
-    filename: '[name].[chunkhash].js',
+    filename: isDevelopment ? '[name].[hash].js' : '[name].[chunkhash].js',
   },
   devtool: 'source-map',
   devServer: {
@@ -92,6 +94,7 @@ const config = {
     }),
   ]
 };
+console.log('isDevelopment', isDevelopment, !isDevelopment);
 isDevelopment && config.plugins.push(new webpack.HotModuleReplacementPlugin());
 !isDevelopment && config.plugins.push(
         new webpack.optimize.AggressiveMergingPlugin(),

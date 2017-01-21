@@ -1,15 +1,15 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-class Fiverr extends React.Component {
+class FiverrClone extends React.Component {
   render() {
     return (
       <div>
         Main Pages
-        <Link to='/product'>View Product</Link>
+        <Link to='/product'>View Product re</Link>
       </div>
     );
   }
 }
 
-export default Fiverr;
+export default FiverrClone;

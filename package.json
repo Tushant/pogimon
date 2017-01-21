@@ -6,7 +6,7 @@
   "license": "MIT",
   "scripts": {
     "pre-start": "webpack",
-    "start-dev": "node server.js --development",
+    "start-dev": "rimraf dist && webpack && node server.js --development",
     "start-prod": "rimraf dist && webpack && node server.js --production"
   },
   "dependencies": {
