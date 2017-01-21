@@ -26,7 +26,7 @@ const config = {
                             'react-hot-loader/patch',
                             'webpack/hot/only-dev-server',
                             entryPath
-                          ] : entryPath,
+                          ] : [entryPath],
     vendor: VENDOR_LIBS,
   },
   output: {

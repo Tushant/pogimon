@@ -6,7 +6,7 @@ class FiverrClone extends React.Component {
     return (
       <div>
         Main Pages
-        <Link to='/product'>View Product re</Link>
+        <Link to='/product'>View Product Here</Link>
       </div>
     );
   }
