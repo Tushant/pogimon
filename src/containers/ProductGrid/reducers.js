@@ -12,7 +12,6 @@ function productFilterFromStatus({checked}) {
 }
 
 function productFilterFromTime({time}) {
-  console.log('time', time);
   if (time !== 'any') {
     return products.filter(product => product.deliveryTime === time);
   } else

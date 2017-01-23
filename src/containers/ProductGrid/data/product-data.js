@@ -28,7 +28,7 @@ export default function () {
       image: "https://learnable-images.s3.amazonaws.com/screencasts/a2a2543d-1502-4fac-9336-8f9627510105.png",
       price: "60",
       category: "programming",
-      deliveryTime: "24 hour",
+      deliveryTime: "24 hours",
       status: "offline",
       sellerLevel: "1",
       sellerLanguage: "English"

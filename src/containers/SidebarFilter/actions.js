@@ -16,7 +16,6 @@ export function priceRange(price1, price2) {
 }
 
 export function deliveryTime(time) {
-  console.log('time', time.target.value);
   return {
     type: 'FILTER_TIME',
     time

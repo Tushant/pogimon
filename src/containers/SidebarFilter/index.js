@@ -15,12 +15,12 @@ class SidebarFilter extends React.Component {
         <h3>Refine Results</h3>
         <ul className="list-unstyled">
           <h2>Delivery time</h2>
-          <form>
-            <p><input type="radio" /> Upto 24 hours</p>
-            <p><input type="radio" /> Upto 3 days</p>
-            <p><input type="radio" /> Upto 7 days</p>
-            <p><input type="radio" /> Any</p>
-        </form>
+          <li onClick={(e) => this.props.deliveryTime(e.target.value)}>
+            <p><input type="radio" name="deliveryTime" value="24 hours"/> Upto 24 hours</p>
+            <p><input type="radio" name="deliveryTime" value="3 days" /> Upto 3 days</p>
+            <p><input type="radio" name="deliveryTime" value=" 7 days" /> Upto 7 days</p>
+            <p><input type="radio" name="deliveryTime" value="any" /> Any</p>
+        </li>
         </ul>
         <hr />
         <h2>Price Range</h2>
