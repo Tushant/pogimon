@@ -22,7 +22,7 @@ const entryPath = path.join(__dirname, 'src/index.js');
 const config = {
   entry: {
     bundle: isDevelopment ? [
-                            'webpack-hot-middleware/client?reload=true',
+                            'webpack-dev-server/client?http://localhost:3000',
                             'react-hot-loader/patch',
                             'webpack/hot/only-dev-server',
                             entryPath

@@ -8,7 +8,7 @@ class Root extends React.Component {
     const { store, history } = this.props;
     return(
       <Provider store={store}>
-        <Router onUpdate={() => window.scrollTo(0, 0)} routes={routes} history={history} />
+        <Router routes={routes} history={history} />
       </Provider>
     );
   }

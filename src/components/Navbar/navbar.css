@@ -1,0 +1,10 @@
+a.navbar-brand {
+    font-size: 2em;
+    color: #fff !important;
+    font-weight: bold;
+}
+
+p.navbar-text span {
+    padding: 0 25px;
+    font-size: 1.3em;
+}

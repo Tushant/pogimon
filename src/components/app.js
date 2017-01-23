@@ -2,7 +2,7 @@ import React from 'react';
 
 function App(props) {
   return (
-    <div>{props.children}</div>
+    <div className="main-wrapper">{props.children}</div>
   );
 }
 

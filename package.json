@@ -6,13 +6,14 @@
   "license": "MIT",
   "scripts": {
     "pre-start": "webpack",
-    "start-dev": "rimraf dist && webpack && node server.js --development",
+    "start-dev": "rimraf dist && webpack-dev-server --port 3000 --hot && node server.js --development",
     "start-prod": "rimraf dist && webpack && node server.js --production"
   },
   "dependencies": {
     "express": "^4.14.0",
     "lodash": "^4.17.4",
     "react": "^15.4.2",
+    "react-bootstrap": "^0.30.7",
     "react-dom": "^15.4.2",
     "react-redux": "^5.0.2",
     "react-router": "^3.0.2",
