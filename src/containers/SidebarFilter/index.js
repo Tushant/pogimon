@@ -1,14 +1,20 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { showOnline, deliveryTime, priceRange } from './actions';
+import { showOnline, deliveryTime, priceRange, sellerLevel } from './actions';
 
 const mapDispatchToProps = (dispatch) => ({
   showOnline: (checked) => dispatch(showOnline(checked)),
   deliveryTime: (time) => dispatch(deliveryTime(time)),
   priceRange: (price1, price2) => dispatch(priceRange(price1, price2)),
+  sellerLevel: (level) => dispatch(sellerLevel(level)),
 });
 
 class SidebarFilter extends React.Component {
+  handleSellerLevel(e) {
+    let levels = [].filter.call(document.getElementsByName('seller[]'), (target) => target.checked).
+      map(c => c.value);
+    this.props.sellerLevel(levels);
+  }
   render() {
     return (
       <div className="sidebar-filter">
@@ -36,6 +42,14 @@ class SidebarFilter extends React.Component {
           <input type="checkbox" onClick={(e) => this.props.showOnline(e.target.checked)}/>
           show online sellers
         </span>
+        <ul className="list-unstyled">
+          <h2>Seller Lever</h2>
+          <li onClick={(e) => this.handleSellerLevel(e)}>
+            <p><input type="checkbox" name="seller[]" value="new" />New Seller</p>
+            <p><input type="checkbox" name="seller[]" value="1" />Level 1</p>
+            <p><input type="checkbox" name="seller[]" value="2" />Level 2</p>
+          </li>
+        </ul>
       </div>
     );
   }

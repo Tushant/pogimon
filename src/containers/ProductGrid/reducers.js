@@ -22,6 +22,13 @@ function productFilterFromPrice({price1, price2}) {
   return products.filter(product => product.price > price1 && product.price < price2);
 }
 
+function productFilterFromLevel({level}) {
+  return products.filter(function(product) {
+    return level.indexOf(product.sellerLevel) !== -1;
+  });
+}
+
+
 export default function getProduct(state = initialState, action) {
   switch (action.type) {
     case 'PRODUCT_FETCH_START':
@@ -34,6 +41,8 @@ export default function getProduct(state = initialState, action) {
       return { ...state, fetched: true, fetching: false, products: productFilterFromStatus(action)};
     case 'FILTER_TIME':
       return { ...state, fetched: true, fetching: false, products: productFilterFromTime(action)};
+    case 'SELLER_LEVEL':
+      return { ...state, fetched: true, fetching: false, products: productFilterFromLevel(action)};
     default:
       return state;
   }

@@ -1,8 +1,12 @@
 import React from 'react';
+import Navbar from './Navbar/index';
 
 function App(props) {
   return (
-    <div className="main-wrapper">{props.children}</div>
+    <div className="main-wrapper">
+      <Navbar />
+      {props.children}
+    </div>
   );
 }
 

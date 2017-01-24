@@ -21,3 +21,10 @@ export function deliveryTime(time) {
     time
   }
 }
+
+export function sellerLevel(level) {
+  return {
+    type: 'SELLER_LEVEL',
+    level
+  }
+}

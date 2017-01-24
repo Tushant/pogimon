@@ -15,7 +15,7 @@ const routes = {
   indexRoute: { component: Home },
   childRoutes: [
     {
-      path: 'product',
+      path: 'product/:slug',
       getComponent(location, cb) {
         System.import('./containers/Product/index').then(loadRoute(cb)).catch(errorLoading);
       }

@@ -9,7 +9,6 @@ class FiverrClone extends React.Component {
   render() {
     return (
       <div className="main-block">
-        <Navbar />
         <Banner />
         <div className="container-fluid">
           <div className="row">

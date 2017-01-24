@@ -1,0 +1,19 @@
+.products {
+  margin: 10px 0;
+  padding: 10px;
+}
+
+/*.product {
+  border: solid 1px #999;
+}*/
+
+.price {
+  color: #1ab394;
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.product-name {
+  font-size: 1.2em;
+  line-height: 1.8em;
+}
