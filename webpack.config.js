@@ -22,8 +22,8 @@ const entryPath = path.join(__dirname, 'src/index.js');
 const config = {
   entry: {
     bundle: isDevelopment ? [
-                            'webpack-dev-server/client?http://localhost:3000',
                             'react-hot-loader/patch',
+                            'webpack-dev-server/client?http://localhost:3000',
                             'webpack/hot/only-dev-server',
                             entryPath
                           ] : [entryPath],
@@ -36,7 +36,8 @@ const config = {
   },
   devtool: 'source-map',
   devServer: {
-    hot: true
+    hot: true,
+    historyApiFallback: true,
   },
   module: {
     rules: [

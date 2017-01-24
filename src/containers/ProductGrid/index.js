@@ -15,7 +15,7 @@ function renderProduct(products) {
   const product = _.map(products, (product) =>
             <Col xs={12} md={4} key={product.id} className="products">
               <div className="product">
-                <Link to={`product/${product.name}`}>
+                <Link to={{pathname: `product/${product.name}`, query: { id: product.id }}}>
                   <img src={product.image} className="img-responsive" />
                 </Link>
                 <span className="pull-left product-name">{product.name}</span>
