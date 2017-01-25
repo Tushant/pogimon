@@ -26,9 +26,9 @@ export default function () {
       id: "2",
       user: [
         {
-          name: "Tushant Khatiwada",
-          from: "Nepal",
-          speaks: ["English", "Nepali"],
+          name: "Ed",
+          from: "Singapore",
+          speaks: ["English"],
           positiveRating: "100%",
           ResponseTime: "1 hrs",
           description: "I am 3 year experienced Developer with a knowledge on myriad technologies like Python, Django, Javascript and Wordpress. I am currently working as a full stack developer in my startup which is about to release sooner if not soon. These day i am mostly focused on frontend, especially reactjs part."
