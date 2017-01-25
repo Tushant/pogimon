@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { showOnline, deliveryTime, priceRange, sellerLevel } from './actions';
+import './sidebarFilter.css';
 
 const mapDispatchToProps = (dispatch) => ({
   showOnline: (checked) => dispatch(showOnline(checked)),

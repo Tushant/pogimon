@@ -4,6 +4,7 @@ import Navbar from '../../components/Navbar/index';
 import SidebarFilter from '../SidebarFilter/index';
 import ProductGrid from '../ProductGrid/index';
 import Banner from '../../components/Banner/index';
+import './app.css';
 
 class FiverrClone extends React.Component {
   render() {
